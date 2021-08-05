@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <!--css only-->
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Add student</h1>
+    <form  method="POST">
+        {% csrf_token %}
+        <label for="sname">Student name</label>
+        <input type="text" name="sname" value="{{data.sname}}" required>
+<br>
+        <label for="gender">Gender</label>
+        male<input type="radio" name="gender" value="{{data.gender}}"required>
+        <br>
+        female<input type="radio" name="gender" value="{{data.gender}}"required>
+        <br>
+        <label for="dob">Date of Birth</label>
+        <input type="date" name="dob" value="{{ data.dob}}" required>
+<br>
+        <label for="email">EmailId</label>
+        <input type="email" name="email" value="{{data.email}}" required>
+<br>
+        <label for="phone">Phone Number</label>
+        <input type="number" name="phno" value="{{data.phone}}" required>
+        <br>
+        <input type="submit" value="Update">
+        <br>
+        
+    </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
